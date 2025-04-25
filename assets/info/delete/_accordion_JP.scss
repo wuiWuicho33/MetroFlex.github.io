@@ -1,0 +1,151 @@
+/* ==============================================
+# Accordion
+============================================== */
+.acordeon {
+  //max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  .acordeon-item {
+    margin-bottom: 0.25rem;
+
+    .acordeon-header{
+      cursor: pointer;
+    }
+
+    .acordeon-header,
+    .acordeon-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;        
+      background-color: $primary-color;
+      color: $primary-text-color;
+      padding: 10px 15px;
+      width: 100%;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      font-size:0.875rem;        
+      transition: background-color 0.3s;
+    
+      &:hover {
+        background-color: $tertiary-color;
+        .right-content {
+          display: block;
+        }        
+      }  
+
+      /* Rote el ícono cuando el panel está abierto */
+      &.open .acordeon-icon {
+        transform: rotate(180deg);
+      }      
+
+      .left-content {
+        display: flex;
+        align-items: center;
+      
+        .acordeon-icon {
+          transition: transform 0.3s ease;
+          margin-right: 10px;
+        }  
+      }
+      
+      .right-content {
+        display: none;
+
+        .switch-group, a{
+          display: inline-block;
+          margin-left: 0.5rem;
+        }        
+
+      }
+
+    }
+
+  }  
+}
+
+.acordeon-body {
+  background-color: none;
+  padding: 0.25rem 0.5rem 0;
+  display: none;
+
+  //p {margin: 0;}  
+}
+
+.acordeon-subitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  background-color: $primary-color;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 0.25rem;
+  font-size:0.875rem;  
+  line-height: 2rem;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: $tertiary-color;
+    .right-content {
+      display: block;
+    }        
+  }  
+
+  .right-content {
+    display: none;
+
+    .switch-group, a{
+      display: inline-block;
+      margin-left: 0.5rem;
+    }        
+
+  }  
+
+}
+
+@media (max-width: 425px) {
+  .acordeon-header,
+  .acordeon-inner {
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+
+    .left-content{
+      gap: 1rem;
+    }
+    
+    .right-content {
+      margin-top: 1rem;
+
+      a{
+        margin-left: 1rem !important;
+      }            
+    }    
+
+  }
+
+  .acordeon-subitem {
+    flex-direction: column;
+
+    .right-content {
+      margin-top: 0.5rem;
+
+      a{
+        margin-left: 1rem !important;
+      }            
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .acordeon-header,
+  .acordeon-inner {
+    height: 3rem;
+  }
+}

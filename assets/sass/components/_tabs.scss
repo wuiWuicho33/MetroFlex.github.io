@@ -1,0 +1,56 @@
+/* ===========
+# TABS
+=========== */
+.tabs-container {
+  width: 100%;
+  margin: auto;
+  
+  .tabs{
+    display: flex; 
+    border-bottom: none;    
+  
+    &.tabs-center{
+      justify-content: center;
+    }
+  }  
+}
+
+/* # Tabs button
+------------------------------------ */
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: $primary-color;
+  cursor: pointer;
+  transition: background 0.3s;
+  outline: none;
+  font-family: $secondary-font;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+  color: $primary-text-color;
+  border-bottom: 2px solid $primary-color;
+
+  &.active,
+  &:hover, 
+  &:focus {
+    border-color: $highlight-color;
+    font-weight: bold;
+    color:$highlight-color;  
+  }  
+}
+
+/* # Tab-content
+------------------------------------ */
+.tab-content {
+  background-color:$primary-color;
+  padding-top: 20px;
+  .tab-pane {
+    display: none;
+
+    &.active {display: block;}  
+  }
+  
+}
+
+

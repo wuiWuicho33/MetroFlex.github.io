@@ -1,0 +1,145 @@
+/* ==============================================
+# GALLERY
+============================================== */
+.gallery-section {
+  .gallery-body {
+    background-color: $primary-color;
+    padding: 1rem 0.5rem;
+    border: 1px solid $tertiary-color;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: auto;
+
+    h4 { margin-bottom: 1rem; }
+
+    #imagenDestacada {
+      border-radius: 0.5rem;
+      border: 3px solid $success-color;
+      margin-bottom: 1rem;
+    }
+
+    .wrapper-variants {
+      p { margin: 0 0 0.5rem; }
+
+      .wrapper-thumbnails {
+        .thumbnail {
+          position: relative;
+          
+          .thumbnail-icon {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            padding: 3px;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px; 
+            height: 20px; 
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
+          }
+
+          .thumbnail-icon i {
+            color: $secondary-color; 
+            font-size: 14px; 
+          }
+
+          /* Cambio cuando la miniatura está seleccionada */
+          &.selected .thumbnail-icon i {
+            content: '\f00c'; /* Ícono de check */
+            color: $success-color; 
+          }
+
+          img {
+            border-radius: 0.5rem;
+            opacity: 0.7;
+            cursor: pointer;
+
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gallery-footer {
+    background-color: $secondary-color;
+    padding: 1rem 0.5rem;
+    border: 1px solid $tertiary-color;
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin-top: -1px;
+
+    h5 { margin-bottom: 0.5rem; }
+    p { margin: 0 0 10px 0; }
+  }
+}
+
+/* Thumbnail seleccionado */
+.thumbnail.selected img {
+  border: 3px solid $success-color; 
+  opacity: 1 !important; 
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+
+  .wrapper-thumbnails {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr); 
+    //height: 180px;
+    overflow-y: auto;
+    scrollbar-width: none; 
+
+    .thumbnail-icon {
+      top: 10px;
+      right: 10px;
+    }
+
+    &.h-defined{
+      height: 180px;
+    }
+
+  }
+
+  .thumbnail {
+    width: 100%;
+  }
+
+}
+
+
+/* Tablet and mobile styles */
+@media (max-width: 767px) {
+
+  .wrapper-thumbnails {
+    display: flex;
+    overflow-x: scroll;  
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory; /* Para una mejor experiencia de deslizamiento */
+  }
+
+  /* Scroll horizontal */
+  .thumbnail {
+    flex: 0 0 auto;
+    width: 30%;
+    scroll-snap-align: center;
+  }
+
+}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1536px) {
+  .wrapper-thumbnails {
+    height: 220px;
+  }  
+}

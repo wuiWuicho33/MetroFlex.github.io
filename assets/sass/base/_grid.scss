@@ -1,0 +1,335 @@
+
+/* ==============================================
+# CSS GRID - GAP - SPAN
+============================================== */
+/* # Grid css
+----------------------------------------------- */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-item {
+  padding: 10px;
+  background-color: $tertiary-color;
+  border: 1px solid $fourth-color;
+}
+
+/*Gap*/
+.gap-0 {gap: 0;}
+.gap-1 {gap: 0.25rem; }
+.gap-2 {gap: 0.5rem;}
+.gap-3 {gap: 0.75rem; /* Espacio mediano */}
+.gap-4 {gap: 1rem; /* Espacio estándar */}
+.gap-5 {gap: 1.25rem; /* Espacio grande */}
+.gap-6 {gap: 1.5rem;}
+.gap-8 {gap: 2rem; }
+.gap-10 {gap: 2.5rem; }
+.gap-12 {gap: 3rem; }
+.gap-16 {gap: 4rem; }
+.gap-20 {gap: 5rem; }
+.gap-24 {gap: 6rem; }
+.gap-32 {gap: 8rem; }
+.gap-40 {gap: 10rem; }
+.gap-48 {gap: 12rem; }
+.gap-56 {gap: 14rem; }
+.gap-64 {gap: 16rem; }
+
+/*grid-cols-x*/
+.grid-cols-1 {grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 {grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 {grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 {grid-template-columns: repeat(4, 1fr); }
+.grid-cols-5 {grid-template-columns: repeat(5, 1fr); }
+.grid-cols-6 {grid-template-columns: repeat(6, 1fr); }
+.grid-cols-7 {grid-template-columns: repeat(7, 1fr); }
+.grid-cols-8 {grid-template-columns: repeat(8, 1fr); }
+.grid-cols-9 {grid-template-columns: repeat(9, 1fr); }
+.grid-cols-10 {grid-template-columns: repeat(10, 1fr); }
+.grid-cols-11 {grid-template-columns: repeat(11, 1fr); }
+.grid-cols-12 {grid-template-columns: repeat(12, 1fr); }
+
+/*col-span-x*/
+.col-span-1 { grid-column: span 1 / span 1; }
+.col-span-2 { grid-column: span 2 / span 2; }
+.col-span-3 { grid-column: span 3 / span 3; }
+.col-span-4 { grid-column: span 4 / span 4; }
+.col-span-5 { grid-column: span 5 / span 5; }
+.col-span-6 { grid-column: span 6 / span 6; }
+.col-span-7 { grid-column: span 7 / span 7; }
+.col-span-8 { grid-column: span 8 / span 8; }
+.col-span-9 { grid-column: span 9 / span 9; }
+.col-span-10 { grid-column: span 10 / span 10; }
+.col-span-11 { grid-column: span 11 / span 11; }
+.col-span-12 { grid-column: span 12 / span 12; }
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {
+  /*grid-cols-x*/
+  .sm\:grid-cols-1 {grid-template-columns: repeat(1, 1fr);}
+  .sm\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
+  .sm\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
+  .sm\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
+  .sm\:grid-cols-5 {grid-template-columns: repeat(5, 1fr);}
+  .sm\:grid-cols-6 {grid-template-columns: repeat(6, 1fr);}
+  .sm\:grid-cols-7 {grid-template-columns: repeat(7, 1fr);}
+  .sm\:grid-cols-8 {grid-template-columns: repeat(8, 1fr);}
+  .sm\:grid-cols-9 {grid-template-columns: repeat(9, 1fr);}
+  .sm\:grid-cols-10 {grid-template-columns: repeat(10, 1fr);}
+  .sm\:grid-cols-11 {grid-template-columns: repeat(11, 1fr);}
+  .sm\:grid-cols-12 {grid-template-columns: repeat(12, 1fr);}
+  /*col-span-x*/
+  .sm\:col-span-1 { grid-column: span 1 / span 1; }
+  .sm\:col-span-2 { grid-column: span 2 / span 2; }
+  .sm\:col-span-3 { grid-column: span 3 / span 3; }
+  .sm\:col-span-4 { grid-column: span 4 / span 4; }
+  .sm\:col-span-5 { grid-column: span 5 / span 5; }
+  .sm\:col-span-6 { grid-column: span 6 / span 6; }
+  .sm\:col-span-7 { grid-column: span 7 / span 7; }
+  .sm\:col-span-8 { grid-column: span 8 / span 8; }
+  .sm\:col-span-9 { grid-column: span 9 / span 9; }
+  .sm\:col-span-10 { grid-column: span 10 / span 10; }
+  .sm\:col-span-11 { grid-column: span 11 / span 11; }
+  .sm\:col-span-12 { grid-column: span 12 / span 12; }  
+
+  /*Gap*/
+  .sm\:gap-0 {gap: 0;}
+  .sm\:gap-1 {gap: 0.25rem; }
+  .sm\:gap-2 {gap: 0.5rem;}
+  .sm\:gap-3 {gap: 0.75rem;}
+  .sm\:gap-4 {gap: 1rem;}
+  .sm\:gap-5 {gap: 1.25rem;}
+  .sm\:gap-6 {gap: 1.5rem;}
+  .sm\:gap-8 {gap: 2rem; }
+  .sm\:gap-10 {gap: 2.5rem; }
+  .sm\:gap-12 {gap: 3rem; }
+  .sm\:gap-16 {gap: 4rem; }
+  .sm\:gap-20 {gap: 5rem; }
+  .sm\:gap-24 {gap: 6rem; }
+  .sm\:gap-32 {gap: 8rem; }
+  .sm\:gap-40 {gap: 10rem; }
+  .sm\:gap-48 {gap: 12rem; }
+  .sm\:gap-56 {gap: 14rem; }
+  .sm\:gap-64 {gap: 16rem; }
+
+}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+  /*grid-cols-x*/
+  .md\:grid-cols-1 {grid-template-columns: repeat(1, 1fr);}
+  .md\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
+  .md\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
+  .md\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
+  .md\:grid-cols-5 {grid-template-columns: repeat(5, 1fr);}
+  .md\:grid-cols-6 {grid-template-columns: repeat(6, 1fr);}
+  .md\:grid-cols-7 {grid-template-columns: repeat(7, 1fr);}
+  .md\:grid-cols-8 {grid-template-columns: repeat(8, 1fr);}
+  .md\:grid-cols-9 {grid-template-columns: repeat(9, 1fr);}
+  .md\:grid-cols-10 {grid-template-columns: repeat(10, 1fr)}
+  .md\:grid-cols-11 {grid-template-columns: repeat(11, 1fr);}
+  .md\:grid-cols-12 {grid-template-columns: repeat(12, 1fr);}
+  /*col-span-x*/
+  .md\:col-span-1 { grid-column: span 1 / span 1; }
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:col-span-3 { grid-column: span 3 / span 3; }
+  .md\:col-span-4 { grid-column: span 4 / span 4; }
+  .md\:col-span-5 { grid-column: span 5 / span 5; }
+  .md\:col-span-6 { grid-column: span 6 / span 6; }
+  .md\:col-span-7 { grid-column: span 7 / span 7; }
+  .md\:col-span-8 { grid-column: span 8 / span 8; }
+  .md\:col-span-9 { grid-column: span 9 / span 9; }
+  .md\:col-span-10 { grid-column: span 10 / span 10; }
+  .md\:col-span-11 { grid-column: span 11 / span 11; }
+  .md\:col-span-12 { grid-column: span 12 / span 12; }  
+
+  th,td {font-size:0.875rem;}
+  .float-md-left {float: left;}
+  .float-md-right {float: right;}
+  .float-md-none {float: none;}
+  .hidden-sm {display:inline-block;}
+
+  /*Gap*/
+  .md\:gap-0 {gap: 0;}
+  .md\:gap-1 {gap: 0.25rem; }
+  .md\:gap-2 {gap: 0.5rem;}
+  .md\:gap-3 {gap: 0.75rem;}
+  .md\:gap-4 {gap: 1rem;}
+  .md\:gap-5 {gap: 1.25rem;}
+  .md\:gap-6 {gap: 1.5rem;}
+  .md\:gap-8 {gap: 2rem; }
+  .md\:gap-10 {gap: 2.5rem; }
+  .md\:gap-12 {gap: 3rem; }
+  .md\:gap-16 {gap: 4rem; }
+  .md\:gap-20 {gap: 5rem; }
+  .md\:gap-24 {gap: 6rem; }
+  .md\:gap-32 {gap: 8rem; }
+  .md\:gap-40 {gap: 10rem; }
+  .md\:gap-48 {gap: 12rem; }
+  .md\:gap-56 {gap: 14rem; }
+  .md\:gap-64 {gap: 16rem; }
+
+}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {
+  /*grid-cols-x*/
+  .lg\:grid-cols-1 {grid-template-columns: repeat(1, 1fr);}
+  .lg\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
+  .lg\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
+  .lg\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
+  .lg\:grid-cols-5 {grid-template-columns: repeat(5, 1fr);}
+  .lg\:grid-cols-6 {grid-template-columns: repeat(6, 1fr);}
+  .lg\:grid-cols-7 {grid-template-columns: repeat(7, 1fr);}
+  .lg\:grid-cols-8 {grid-template-columns: repeat(8, 1fr);}
+  .lg\:grid-cols-9 {grid-template-columns: repeat(9, 1fr);}
+  .lg\:grid-cols-10 {grid-template-columns: repeat(10, 1fr);}
+  .lg\:grid-cols-11 {grid-template-columns: repeat(11, 1fr);}
+  .lg\:grid-cols-12 {grid-template-columns: repeat(12, 1fr);}
+  /*col-span-x*/
+  .lg\:col-span-1 { grid-column: span 1 / span 1; }
+  .lg\:col-span-2 { grid-column: span 2 / span 2; }
+  .lg\:col-span-3 { grid-column: span 3 / span 3; }
+  .lg\:col-span-4 { grid-column: span 4 / span 4; }
+  .lg\:col-span-5 { grid-column: span 5 / span 5; }
+  .lg\:col-span-6 { grid-column: span 6 / span 6; }
+  .lg\:col-span-7 { grid-column: span 7 / span 7; }
+  .lg\:col-span-8 { grid-column: span 8 / span 8; }
+  .lg\:col-span-9 { grid-column: span 9 / span 9; }
+  .lg\:col-span-10 { grid-column: span 10 / span 10; }
+  .lg\:col-span-11 { grid-column: span 11 / span 11; }
+  .lg\:col-span-12 { grid-column: span 12 / span 12; } 
+
+  /*Gap*/
+  .lg\:gap-0 {gap: 0;}
+  .lg\:gap-1 {gap: 0.25rem; }
+  .lg\:gap-2 {gap: 0.5rem;}
+  .lg\:gap-3 {gap: 0.75rem;}
+  .lg\:gap-4 {gap: 1rem;}
+  .lg\:gap-5 {gap: 1.25rem;}
+  .lg\:gap-6 {gap: 1.5rem;}
+  .lg\:gap-8 {gap: 2rem; }
+  .lg\:gap-10 {gap: 2.5rem; }
+  .lg\:gap-12 {gap: 3rem; }
+  .lg\:gap-16 {gap: 4rem; }
+  .lg\:gap-20 {gap: 5rem; }
+  .lg\:gap-24 {gap: 6rem; }
+  .lg\:gap-32 {gap: 8rem; }
+  .lg\:gap-40 {gap: 10rem; }
+  .lg\:gap-48 {gap: 12rem; }
+  .lg\:gap-56 {gap: 14rem; }
+  .lg\:gap-64 {gap: 16rem; }  
+}
+
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+@media (min-width: 1280px) {
+  /*grid-cols-x*/
+  .xl\:grid-cols-1 {grid-template-columns: repeat(1, 1fr);}
+  .xl\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
+  .xl\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
+  .xl\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
+  .xl\:grid-cols-5 {grid-template-columns: repeat(5, 1fr);}
+  .xl\:grid-cols-6 {grid-template-columns: repeat(6, 1fr);}
+  .xl\:grid-cols-7 {grid-template-columns: repeat(7, 1fr);}
+  .xl\:grid-cols-8 {grid-template-columns: repeat(8, 1fr);}
+  .xl\:grid-cols-9 {grid-template-columns: repeat(9, 1fr);}
+  .xl\:grid-cols-10 {grid-template-columns: repeat(10, 1fr);}
+  .xl\:grid-cols-11 {grid-template-columns: repeat(11, 1fr);}
+  .xl\:grid-cols-12 {grid-template-columns: repeat(12, 1fr);}
+  /*col-span-x*/
+  .xl\:col-span-1 { grid-column: span 1 / span 1; }
+  .xl\:col-span-2 { grid-column: span 2 / span 2; }
+  .xl\:col-span-3 { grid-column: span 3 / span 3; }
+  .xl\:col-span-4 { grid-column: span 4 / span 4; }
+  .xl\:col-span-5 { grid-column: span 5 / span 5; }
+  .xl\:col-span-6 { grid-column: span 6 / span 6; }
+  .xl\:col-span-7 { grid-column: span 7 / span 7; }
+  .xl\:col-span-8 { grid-column: span 8 / span 8; }
+  .xl\:col-span-9 { grid-column: span 9 / span 9; }
+  .xl\:col-span-10 { grid-column: span 10 / span 10; }
+  .xl\:col-span-11 { grid-column: span 11 / span 11; }
+  .xl\:col-span-12 { grid-column: span 12 / span 12; } 
+
+  /*Gap*/
+  .xl\:gap-0 {gap: 0;}
+  .xl\:gap-1 {gap: 0.25rem; }
+  .xl\:gap-2 {gap: 0.5rem;}
+  .xl\:gap-3 {gap: 0.75rem;}
+  .xl\:gap-4 {gap: 1rem;}
+  .xl\:gap-5 {gap: 1.25rem;}
+  .xl\:gap-6 {gap: 1.5rem;}
+  .xl\:gap-8 {gap: 2rem; }
+  .xl\:gap-10 {gap: 2.5rem; }
+  .xl\:gap-12 {gap: 3rem; }
+  .xl\:gap-16 {gap: 4rem; }
+  .xl\:gap-20 {gap: 5rem; }
+  .xl\:gap-24 {gap: 6rem; }
+  .xl\:gap-32 {gap: 8rem; }
+  .xl\:gap-40 {gap: 10rem; }
+  .xl\:gap-48 {gap: 12rem; }
+  .xl\:gap-56 {gap: 14rem; }
+  .xl\:gap-64 {gap: 16rem; }    
+}
+
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
+@media (min-width: 1536px) {
+  /*grid-cols-x*/
+  .xxl\:grid-cols-1 {grid-template-columns: repeat(1, 1fr);}
+  .xxl\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
+  .xxl\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
+  .xxl\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
+  .xxl\:grid-cols-5 {grid-template-columns: repeat(5, 1fr);}
+  .xxl\:grid-cols-6 {grid-template-columns: repeat(6, 1fr);}
+  .xxl\:grid-cols-7 {grid-template-columns: repeat(7, 1fr);}
+  .xxl\:grid-cols-8 {grid-template-columns: repeat(8, 1fr);}
+  .xxl\:grid-cols-9 {grid-template-columns: repeat(9, 1fr);}
+  .xxl\:grid-cols-10 {grid-template-columns: repeat(10, 1fr);}
+  .xxl\:grid-cols-11 {grid-template-columns: repeat(11, 1fr);}
+  .xxl\:grid-cols-12 {grid-template-columns: repeat(12, 1fr);}
+  /*col-span-x*/
+  .xxl\:col-span-1 { grid-column: span 1 / span 1; }
+  .xxl\:col-span-2 { grid-column: span 2 / span 2; }
+  .xxl\:col-span-3 { grid-column: span 3 / span 3; }
+  .xxl\:col-span-4 { grid-column: span 4 / span 4; }
+  .xxl\:col-span-5 { grid-column: span 5 / span 5; }
+  .xxl\:col-span-6 { grid-column: span 6 / span 6; }
+  .xxl\:col-span-7 { grid-column: span 7 / span 7; }
+  .xxl\:col-span-8 { grid-column: span 8 / span 8; }
+  .xxl\:col-span-9 { grid-column: span 9 / span 9; }
+  .xxl\:col-span-10 { grid-column: span 10 / span 10; }
+  .xxl\:col-span-11 { grid-column: span 11 / span 11; }
+  .xxl\:col-span-12 { grid-column: span 12 / span 12; } 
+
+  /*Gap*/
+  .xxl\:gap-0 {gap: 0;}
+  .xxl\:gap-1 {gap: 0.25rem; }
+  .xxl\:gap-2 {gap: 0.5rem;}
+  .xxl\:gap-3 {gap: 0.75rem;}
+  .xxl\:gap-4 {gap: 1rem;}
+  .xxl\:gap-5 {gap: 1.25rem;}
+  .xxl\:gap-6 {gap: 1.5rem;}
+  .xxl\:gap-8 {gap: 2rem; }
+  .xxl\:gap-10 {gap: 2.5rem; }
+  .xxl\:gap-12 {gap: 3rem; }
+  .xxl\:gap-16 {gap: 4rem; }
+  .xxl\:gap-20 {gap: 5rem; }
+  .xxl\:gap-24 {gap: 6rem; }
+  .xxl\:gap-32 {gap: 8rem; }
+  .xxl\:gap-40 {gap: 10rem; }
+  .xxl\:gap-48 {gap: 12rem; }
+  .xxl\:gap-56 {gap: 14rem; }
+  .xxl\:gap-64 {gap: 16rem; }   
+}

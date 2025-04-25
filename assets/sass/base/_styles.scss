@@ -1,0 +1,260 @@
+/*::::::::::::::::::::::
+:::::::::STYLES:::::::::
+::::::::::::::::::::::*/
+/* -----------------------------------------------
+  # Reset
+----------------------------------------------- */
+html,
+body {
+  position: relative;
+  /*min-height: 100%;*/
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  //Estados de botón
+  /*
+  &:hover, &:active, a:focus {
+    text-decoration: underline;
+  }  
+  */
+}
+
+/*Para realizar desplazamientos suaves*/
+/*html {scroll-behavior: smooth;}*/
+
+.no-scroll {overflow: hidden;}
+
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+ul, ol{
+  margin:0; 
+  padding:0; 
+  list-style:none;
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+/*Transition*/
+/* *, *::before, *::after{transition:all .2s ease-in-out;} */ 
+
+/* -----------------------------------------------
+  # Fonts
+----------------------------------------------- */
+body, form, label, input, textarea, select, a, .btn{
+  font-family:$secondary-font;
+  font-size:1rem; /*font-size:16px;*/
+  line-height: 1.1875rem;
+  font-weight: 300;  
+}
+p,ul,ol {
+  font-family:$secondary-font;
+  font-size:1rem;  
+  line-height: 1.4rem;
+  font-weight: 300;  
+  padding: 0;
+}
+p{margin: 0 0 20px;}
+p:last-child {margin-bottom: 0;}
+p.lead{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+th,td {
+  font-family:$secondary-font;
+  font-weight: 300;  
+  font-size:1rem;  
+}
+
+a{font-size:1rem;}
+
+.btn {
+  font-family:$secondary-font;
+  font-weight: 300;
+}
+
+small,.small {  
+  font-weight: normal;
+  line-height: 1;
+  color: $fifth-color;
+  font-size: 85%;  
+}
+
+b,strong {font-weight: bold;}
+
+/*Títulos*/
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family:$primary-font;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  padding: 0;
+  line-height: normal;
+}
+/*Sólo si se requiere títulos H1 más grandes en el home */
+h1.home ,h2.home{font-size: 2.3rem;}
+h1, .h1 { font-size: 1.8rem; }
+h2, .h2 { font-size: 1.4rem; }
+h3, .h3 { font-size: 1.2rem; }
+h4, .h4 { font-size: 1.1rem; }
+h5, .h5 { font-size: 1rem; }
+h6, .h6 { font-size: 0.9rem; }
+h2.teaser {
+  font-family:$secondary-font;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 0px;
+  text-transform: capitalize;
+}
+
+.display{
+  line-height: 1.2;
+  font-weight: 300;  
+}
+.display-1{font-size: 6rem;}
+.display-2{font-size: 5.5rem;}
+.display-3{font-size: 4.5rem;}
+.display-4{font-size: 3.5rem;}
+
+.font-xs{font-size:.8rem;}
+.font-x1{font-size:1.2rem;}
+.font-x2{font-size:1.8rem;}
+.font-x3{font-size:2.8rem;}
+
+/* -----------------------------------------------
+  # Text styles
+----------------------------------------------- */
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+.text-center {text-align:center;}
+.text-lowercase {text-transform: lowercase;}
+.text-uppercase {text-transform: uppercase;}
+.text-capitalize {text-transform: capitalize;}
+
+/* -----------------------------------------------
+  # Image styles
+----------------------------------------------- */
+img, object, embed, video {max-width: 100%;}
+
+img{
+    width:auto;
+    height:auto;
+    margin:0;
+    vertical-align:middle;
+}
+.ie6 img {width:100%;}
+.img-hover:hover {opacity: 0.8;}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.w-100{width: 100%}
+/*Background images*/
+.bg-img{
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.bg-attach{background-attachment: fixed;}
+.img-circle {border-radius: 50%;}
+
+/* -----------------------------------------------
+  # Container filter with background image
+----------------------------------------------- */
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: $primary-color;
+  background-color: inherit;
+  
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+.overlay.light::after{
+  background-color:rgba(255,255,255,.55);
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {
+  /* Márgenes y espaciados */
+  h1,h2,h3,h4,h5,h6,
+  .h1,.h2,.h3,.h4,.h5,.h6 {
+    margin: 0 0 1rem 0;
+  }
+
+  h1.home ,h2.home{font-size: 3.8rem;}
+  h1, .h1 {font-size: 2.5rem;}
+  h2, .h2 {font-size: 2rem;}
+  h3, .h3 {font-size: 1.75rem;}
+  h4, .h4 {font-size: 1.5rem;}
+  h5, .h5 {font-size: 1.25rem;}
+  h6, .h6 {font-size: 1rem;}  
+}
+
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+@media (min-width: 1280px) {}
+
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
+@media (min-width: 1536px) {}

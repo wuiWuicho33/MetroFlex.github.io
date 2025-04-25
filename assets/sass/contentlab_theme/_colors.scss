@@ -1,0 +1,128 @@
+/* Imported files and fonts */
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Fuente incrustada
+@font-face{       
+  font-family:'Eurostile_Heavy';         
+  src:url('../fonts/Eurostile/Eurostile_Heavy.eot');       
+  src:url('../fonts/Eurostile/Eurostile_Heavy.eot?#iefix') format('embedded-opentype'),             
+  url('../fonts/Eurostile/Eurostile_Heavy.woff') format('woff'),           
+  url('../fonts/Eurostile/Eurostile_Heavy.ttf') format('truetype'),             
+  url('../fonts/Eurostile/Eurostile_Heavy.svg') format('svg');      
+}
+
+@font-face{       
+  font-family:'FuturaStd-Book';         
+  src:url('../fonts/Futura/FuturaStd-Book.eot');       
+  src:url('../fonts/Futura/FuturaStd-Book.eot?#iefix') format('embedded-opentype'),             
+  url('../fonts/Futura/FuturaStd-Book.woff') format('woff'),           
+  url('../fonts/Futura/FuturaStd-Book.ttf') format('truetype'),             
+  url('../fonts/Futura/FuturaStd-Book.svg') format('svg');      
+}
+
+/*Variables scss  */
+/*Fonts*/
+$primary-font:"Eurostile_Heavy", serif;
+$secondary-font:"FuturaStd-Book", serif;
+
+/*Colors*/
+$primary-color: #ffffff;
+$secondary-color: #ebf5f8;
+$tertiary-color: #cedaf8 ;
+$fourth-color: #949494;
+$fifth-color: #818181;
+$sixty-color:#00E0D0;
+$seventy-color:#009367; 
+$primary-text-color:#000000;
+/*No cambian*/
+$white-color:#ffffff;
+$gray-color:#343941;
+$highlight-color:#0F4C95;
+$success-color:#35a038;
+$warning-color:#db9a17;
+$danger-color:#b92214;
+
+/* -----------
+  # Colours
+----------- */
+/*Body Scrollbar*/
+body::-webkit-scrollbar{width: 10px; background-color:$primary-color;}/*Background color*/
+body::-webkit-scrollbar-thumb{background:$sixty-color;}/*Bar color*/
+body {
+  background: $secondary-color;
+  color:$gray-color;
+}
+p,ul,ol{color:$gray-color;}
+/*Teaser*/
+h1,h2,h3,h4,h5,h6{color: $primary-text-color;}
+
+a {
+  color:lighten($sixty-color, 10%);  
+  //Estados de botón
+  &:hover, &:active, a:focus {
+    color:$sixty-color;  
+  }
+}
+
+/*Form*/
+label{color:$gray-color;}
+form, input, textarea, select,.form-control,.custom-select {
+  color:$gray-color;
+}
+
+/*Text-color*/
+.text-inverted {color:$primary-color;}
+.text-success {color:$success-color;}
+.text-danger {color:$danger-color;}
+.text-warning {color:$warning-color;}
+
+//Icons
+/*i{color:$highlight-color;}*/
+.material-symbols-outlined {
+  color: $primary-text-color;
+  font-size: 2.5rem !important;
+}
+
+.material-symbols-outlined.font-x3 {
+  font-size:4rem !important;
+}
+
+/*Background colors*/
+.bg-default {
+  background-color:$primary-color;
+  h1,h2,h3,h5{color:$sixty-color;}
+  p{color:$gray-color;}
+
+  .material-symbols-outlined {color: $sixty-color;}  
+}
+.bg-light {
+  background-color:$secondary-color;
+  p{color:$primary-text-color;}
+}
+.bg-dark {
+  background: linear-gradient(0deg, $sixty-color, $seventy-color);
+  h1,h2,h3,h4,h5{color:$primary-color;}
+  p{color:$primary-color;}
+  .material-symbols-outlined {color: $primary-color;}
+}
+.bg-darker {
+  background-color:$primary-text-color; 
+  h1,h2,h3,h4,h5{color:$sixty-color;}
+  p, ul{color:$primary-color;}
+
+  .material-symbols-outlined {color: $sixty-color;}
+}
+.bg-success {
+  background-color: $success-color; 
+  p{color:$primary-color;}
+}
+.bg-danger {
+  background-color: $danger-color; 
+  p{color:$primary-color;}
+}
+
+.label{color: $primary-color;}
+.label-primary {background-color: $fourth-color;}
+.label-danger {background-color: $danger-color;}
+.label-success{background-color: $success-color;}

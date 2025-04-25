@@ -1,0 +1,214 @@
+/* ==============================================
+# LAYOUT
+============================================== */
+/* Layout */
+.wrapper {
+  min-height: 100%;
+  position: static;
+  overflow: hidden;
+}
+
+/*Aqui va el main header*/
+
+/* Quicklink_menu */
+/*Aqui iba el Quicklink_menu*/
+
+/* ==============
+* Sidebar Section
+============== */
+.fixed .main-sidebar {
+  position: fixed;
+}
+.fixed .sidebar {
+  overflow: auto;
+  height: 100%;
+}  
+
+.main-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  height: 100%;
+  width: 230px;
+  z-index: 810;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  transition: transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+}
+@media (max-width: 767px) {
+  .main-sidebar {
+    -webkit-transform: translate(-230px, 0);
+    -ms-transform: translate(-230px, 0);
+    -o-transform: translate(-230px, 0);
+    transform: translate(-230px, 0);
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-collapse .main-sidebar {
+    -webkit-transform: translate(-230px, 0);
+    -ms-transform: translate(-230px, 0);
+    -o-transform: translate(-230px, 0);
+    transform: translate(-230px, 0);
+  }
+}
+@media (max-width: 767px) {
+  .sidebar-open .main-sidebar {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@media (max-width: 767px) {
+  .main-sidebar {
+    padding-top: 100px!important;
+  }
+}
+.sidebar {
+  padding-bottom: 10px;
+}
+
+.sidebar-form input:focus {
+  border-color: transparent!important;
+}
+
+/*User panel*/
+/*Aqui iba el user-panel*/
+
+/*sidebar-menu*/
+/*Aqui estaba colocado el sidebar_menu*/
+
+/* ==============
+* Content
+============== */
+.content-wrapper {
+  margin-left: 230px;
+  z-index: 820;  
+  min-height: 100%;
+  z-index: 800;
+}
+@media (max-width: 767px) {
+  .content-wrapper {
+    margin-left: 0;
+  }
+}
+
+.fixed .content-wrapper{
+  padding-top: 70px;
+}
+@media (max-width: 767px) {
+  .fixed .content-wrapper{
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar-open .content-wrapper {
+    -webkit-transform: translate(230px, 0);
+    -ms-transform: translate(230px, 0);
+    -o-transform: translate(230px, 0);
+    transform: translate(230px, 0);
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-collapse .content-wrapper {
+    margin-left: 0;
+  }
+}
+
+/*content-header*/
+.content-header {
+  padding:15px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 1rem;
+
+  h1{
+    margin-bottom: 0;
+  }
+}
+
+/* Content */
+.content-body {
+  min-height: 250px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ==============
+* Footer
+============== */
+.main-footer {
+  margin-left: 230px;
+  z-index: 820;
+}
+@media (max-width: 767px) {
+  .main-footer {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-collapse .main-footer {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar-open .main-footer {
+    -webkit-transform: translate(230px, 0);
+    -ms-transform: translate(230px, 0);
+    -o-transform: translate(230px, 0);
+    transform: translate(230px, 0);
+  }
+}
+.main-footer {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* ==========================
+Colour theme
+========================== */
+ .default-theme .wrapper {
+  background: $sixty-color;
+}
+
+/* ===========
+ Sidebar
+ ========== */
+.default-theme .main-sidebar {
+  background-color: lighten($highlight-color, 10%);
+}
+.default-theme .sidebar a {
+  color: $fourth-color;
+}
+.default-theme .sidebar a:hover {
+  text-decoration: none;
+}
+
+/*sidebar-footer*/
+.sidebar-footer{
+  background-color: $primary-text-color;
+  color:$primary-color;
+}
+
+/* ===========
+ Content
+ ========== */
+ .content-wrapper {
+  /*background-color: #ecf0f5;*/
+  background-color: $secondary-color;
+}
+
+/* ===========
+ Footer
+ ========== */
+.main-footer {
+  background: $primary-color;
+  color: $seventy-color;
+}

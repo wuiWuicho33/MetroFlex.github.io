@@ -1,0 +1,38 @@
+Revisar que los modales y cajas de alerta funcionen correctamente
+Crear mensajes de alerta que se desplieguen en la parte inferior
+Colocar selects con autocompletado
+Crear componente de pasos de llenado
+Crear componente de loading
+Agregar componente de alertas
+Agregar ejemplo de checboxes yradio buttons a la página de forms
+Agregar componente de loader
+Agregar posicionamientos en la hoja de utilidades
+
+Revisar lso scrips del mainnav y el active_link ya que no funcionan juntos, sólo separados.
+
+Revisar el espaciado de los radio and check buttons, dejarlos como están en el arcihvo de puestos y perfiles, con esos estilos. 
+
+
+
+
+
+Otro campo de búsqueda 
+
+<!-- Search -->
+<!--
+<div class="search-container">
+    <input type="text" placeholder="Buscar..." class="form-control">
+    <button>
+        <i class="fa fa-search"></i>
+    </button>
+</div>              
+-->
+
+<!--
+<div class="grid grid-cols-1">
+    <div class="file_upload">
+    <label for="archivo">Selecciona un archivo:</label>
+    <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf,.doc,.docx" required>
+    </div>
+</div>                                                                
+-->

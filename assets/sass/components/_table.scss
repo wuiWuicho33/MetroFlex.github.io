@@ -1,0 +1,93 @@
+.table-responsive {
+  overflow-x:auto;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+thead {
+  background-color: $sixty-color;
+  color: $white-color;
+}
+
+tbody tr{
+  background-color:$primary-color; 
+  cursor: pointer;
+
+  &:nth-child(even) {
+    background-color: $tertiary-color; 
+  }
+  
+  &:hover {
+    background-color: $fourth-color; 
+  }  
+}
+
+td, th {
+  padding: 8px;
+  font-size: 0.750rem; 
+  border: 1px solid $tertiary-color;
+  text-align: left;
+}
+
+/*Mensaje de celda agregada*/
+tr.new {
+  background-color:lighten($success-color, 40%);
+  td small{
+    color:$success-color;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/*Tablas con contenido alineado hacia la derecha*/
+table.align-right{
+  th, 
+  td {text-align: right;}
+
+  th:first-child,
+  td:first-child {
+      text-align: left; 
+  }  
+
+  .switch-group {
+    justify-content: flex-end;
+  }  
+
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile
+-------------------------------------------------------------------- */
+@media (min-width: 425px) {    
+}
+
+/*=> 640px Igual o mayor a 640px se aplicarán los siguientes estilos */
+@media (min-width: 640px) {
+  th, td {
+    padding: 12px; 
+    font-size: 1rem; 
+  }
+}    
+
+/* # Tablet
+-------------------------------------------------------------------- */
+/*=> 768px Igual o mayor a 768px se aplicarán los siguientes estilos */
+@media (min-width: 768px) {}
+
+/*=> 1024px Igual o mayor a 1024px se aplicarán los siguientes estilos */
+@media (min-width: 1024px) {}
+/* # Desktop
+-------------------------------------------------------------------- */
+/*=> 1280px Igual o mayor a 1280px se aplicarán los siguientes estilos */
+@media (min-width: 1280px) {}
+
+/*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
+@media (min-width: 1536px) {}

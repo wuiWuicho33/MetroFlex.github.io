@@ -1,0 +1,39 @@
+ul.secondary_menu {
+  display: flex;
+  padding: 0 0 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  li {
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color ease-in 0.5s;
+    flex: 0 0 auto;
+
+    a {
+      display: block;  
+      padding: 5px 10px; 
+      color: $primary-text-color;
+      text-decoration: none; 
+    }    
+
+    &:hover {
+      border-bottom: 2px solid $highlight-color;
+
+      a {
+        color: $highlight-color;
+        font-weight: bold;
+      }
+    }
+
+    &.active {
+      border-bottom: 2px solid $highlight-color;
+
+      a {
+        color: $highlight-color;
+        font-weight: bold;
+      }
+    }
+
+  }
+}

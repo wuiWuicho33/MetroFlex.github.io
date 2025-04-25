@@ -1,0 +1,83 @@
+/* ==============================================
+# LAYOUT
+============================================== */
+.topbar{
+  padding:0.75rem 0;
+  p{
+    color:$primary-color;
+  }
+}
+
+.topbar .contact{
+  gap:0.25rem;
+
+  a,p{
+    font-size: 0.875rem;
+    color:$primary-text-color;
+  }
+}
+
+header .logo{
+  width: 150px;
+}
+
+footer.footer{
+  border-top:3px solid $seventy-color;
+}
+
+.legales{
+  a,p{
+    font-size: 0.875rem;
+  }  
+  p{margin: 0;}
+  text-align: center;
+}
+
+.card{
+  border-bottom: 5px solid $seventy-color;
+
+  &:hover{
+    background-color: $seventy-color;
+    .icon,a,h5,p,b{color:$primary-color;}      
+
+    border-bottom: 5px solid $gray-color;
+  }
+}
+
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: lighten($highlight-color, 10%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+  .topbar{
+    padding:0.25rem 0;
+  }  
+  .topbar .contact{
+    gap:1rem;
+  }
+
+  footer{
+    text-align: left;
+  }
+}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {}

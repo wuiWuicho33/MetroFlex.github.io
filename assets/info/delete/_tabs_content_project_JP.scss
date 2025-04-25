@@ -1,0 +1,93 @@
+/* ==============================================
+# TABS CONTENT
+============================================== */
+
+/* # Tab-body
+----------------------------------------------- */
+.tab-body {
+  .selects-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tab-body-container{
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+  
+    /* Para Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  
+    /* Para navegadores WebKit (Chrome, Safari, Edge) */
+    &::-webkit-scrollbar {
+      display: none;
+    }  
+  }  
+}
+
+/* ==========================
+Colour theme
+========================== */
+/*component_switch*/
+.tabs-title .switch-group {
+  p, .switch-label{
+    color:$primary-color;
+  }
+  .switch {
+    .slider {
+      background-color:$fourth-color;
+    }
+    input:checked + .slider {
+      background-color:$success-color;
+    }
+  }
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile
+-------------------------------------------------------------------- */
+/*=> 640px Igual o mayor a 640px se aplicarán los siguientes estilos */
+@media (min-width: 640px) { }
+
+/* # Tablet
+-------------------------------------------------------------------- */
+/*=> 768px Igual o mayor a 768px se aplicarán los siguientes estilos */
+@media (min-width: 768px) {}
+
+/*=> 1024px Igual o mayor a 1024px se aplicarán los siguientes estilos */
+@media (min-width: 1024px) {
+  .tab-body {
+    .selects-group{
+      display: grid;
+      grid-template-columns:repeat(2, 1fr);
+    }
+
+    .tab-body-container{
+      height: 380px;
+    }    
+  }    
+
+}
+
+/* # Desktop
+-------------------------------------------------------------------- */
+/*=> 1280px Igual o mayor a 1280px se aplicarán los siguientes estilos */
+@media (min-width: 1280px) {
+  .tab-body {
+      .selects-group{
+        grid-template-columns:repeat(3, 1fr);
+      }
+  }  
+}
+
+/*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
+@media (min-width: 1536px) {}
+
+
+/* De 767px hacia abajo se aplicarán los siguientes estilos */
+@media (max-width: 767px) {}

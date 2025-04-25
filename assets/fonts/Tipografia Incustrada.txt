@@ -1,0 +1,113 @@
+Aqui se colocan las funtes que se
+pudieran llegar a incustrar al sitio.
+Las fuentes se pueden descargar de varios sitios
+pero dos son los más comunes.
+
+www.dafont.com
+www.googlefonts.com
+
+A la fuente que descarguemos la necesitamos convertir
+por lo menos en cuatro formatos.
+
+a).eot
+b).woff
+c).ttf
+d).svg 
+
+Existen varias páginas que ofrecen ese servicio, y las
+buscamos como 
+
+http://www.freefontconverter.com/
+Online Font Converter.
+
+Algunas páginas convierten una fuente a muchas versiones
+al mismo tiempo y en otras tienes que convertir la fuente
+a cada formato uno por uno.
+
+
+
+
+
+/* =====FUENTES DEL SITIO==========================================
+    
+Existen tres maneras comunes de mandar llamar a una fuente:
+        
+1.-Fuente est‡ndar
+        
+2.-Fuente incrustada
+        
+3.-Fuente de Google Fonts
+
+    
+1.-FUENTE ESTANDAR
+    
+Podemos colocar las siguientes reglas para mandar llamar a las
+    
+fuentes que por default, toda computadora deberia tener.
+    
+    
+body{font-family:"Arial,Myriad Pro, Sans Serif";
+}
+    
+
+***************************************************************
+    
+2.-FUENTE INCRUSTADA
+    
+Este es un ejemplo del c—digo que debe tener una fuente incrustada
+    
+de nuestra carpeta de fuentes, la primera regla corresponde al
+    
+c—digo con el que se incrusta la fuente, y con la segunda regla
+    
+mandamos llamar a la fuente con el tipo de selector que necesitemos,
+    
+en este caso el selector es de etiqueta (body) y la fuente aparecera
+    
+en todo el cuerpo del documento:
+
+    
+@font-face{
+       
+font-family:'helvetica';
+       
+src:url('../fonts/helvetica.eot');
+	   
+src:url('../fonts/helvetica.eot?#iefix') format('embedded-opentype'),
+           
+url('../fonts/helvetica.woff') format('woff'),
+	       
+url('../fonts/helvetica.ttf') format('truetype'),
+           
+url('../fonts/helvetica.svg') format('svg');
+    
+}
+
+        
+    
+body{
+        
+font-family: 'helvetica', sans-serif;
+        
+color:#464646;
+    }
+
+    
+***************************************************************
+    
+3.-FUENTE DE GOOGLE FONTS
+    
+Este es un ejemplo de una fuente importada de Google Fonts:
+    
+Ambas reglas ya las proporciona la p‡gina, y lo œnico que tenemos
+    
+que hacer es colocarlas en las secciones correspondientes a esta 
+    
+hoja de estilos.
+
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+    
+body{font-family: 'Raleway', sans-serif;}
+
+
+===================================================================*/

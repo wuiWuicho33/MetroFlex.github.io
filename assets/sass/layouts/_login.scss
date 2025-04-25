@@ -1,0 +1,68 @@
+/* ==============================================
+# LAYOUT
+============================================== */
+
+/* # Login
+----------------------------------------------- */
+.login-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 100vh; 
+  background-color:$secondary-color;
+}
+
+.login-box {
+  width: 90%;
+  max-width: 900px;
+  max-height: 550px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display:grid;
+  .cover{
+    display:none;
+    img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }    
+  }
+  .login-body {
+    padding: 20px;
+    width:100%;
+    background-color: $primary-color;
+    footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      .btn{margin-bottom: 1rem;}
+      p,a{font-size: 0.875rem;}      
+    }
+  }  
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile
+-------------------------------------------------------------------- */
+/*=> 640px Igual o mayor a 640px se aplicarán los siguientes estilos */
+@media (min-width: 640px) {}
+
+/* # Tablet
+-------------------------------------------------------------------- */
+/*=> 768px Igual o mayor a 768px se aplicarán los siguientes estilos */
+@media (min-width: 768px) {   
+  /*Login form*/
+  .login-box {grid-template-columns:1fr 1fr;}
+  .login-box .cover{display:block;}       
+}
+
+/*=> 1024px Igual o mayor a 1024px se aplicarán los siguientes estilos */
+@media (min-width: 1024px) {}
+/* # Desktop
+-------------------------------------------------------------------- */
+/*=> 1280px Igual o mayor a 1280px se aplicarán los siguientes estilos */
+@media (min-width: 1280px) {}
+/*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
+@media (min-width: 1536px) {}

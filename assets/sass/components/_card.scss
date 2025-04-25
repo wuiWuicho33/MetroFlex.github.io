@@ -1,0 +1,35 @@
+  /* # card
+  ---------------------------------------------- */
+  .card {
+    background-color:$primary-color;
+    background-clip: border-box;
+    border-radius: 0.5rem;
+    border:1px solid $tertiary-color;
+    margin-bottom: 1rem;
+
+    .card-header {
+      padding: 1rem 1rem;
+      //background-color:$primary-color;
+      color:$sixty-color;
+      border-bottom: 1px solid $tertiary-color;
+      border-radius:0.5rem 0.5rem 0 0;
+
+      h5{
+        margin-bottom: 0;
+      }
+    }    
+
+    .card-body {padding:1rem;}     
+
+    footer.card-footer {
+      background-color:$primary-color;
+      padding:1rem;
+      border-top: 1px solid $tertiary-color;
+      border-radius:0 0 0.5rem 0.5rem ;      
+      text-align: left;
+
+      p{
+        word-break: break-all;
+      }      
+    }     
+  }

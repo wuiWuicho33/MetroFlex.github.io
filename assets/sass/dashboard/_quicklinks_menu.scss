@@ -1,0 +1,141 @@
+/* ==============================================
+# Quick Links Menu
+============================================== */
+/* quicklinks-menu */
+.quicklinks-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 15px 0 0;
+    float: right;
+  }
+  .quicklinks-menu > li {
+    position: static;
+    display: block;
+    float: left;
+  }
+  /* Estilo de los enlaces */
+  .quicklinks-menu > li > a {
+    position: relative;
+    display: block;
+    padding: 15px;
+    line-height: 20px;
+  }
+  .quicklinks-menu > li > a:hover,
+  .quicklinks-menu > li > a:focus {
+    text-decoration: none;
+  }
+  /* Etiquetas de notificación */
+  .quicklinks-menu > li > a > .label {
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: .9;
+  }
+  /* Imagen del usuario */
+  .quicklinks-menu > .user .user-image {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px;
+  }
+  /* Estilo para el Dropdown */
+  .quicklinks-menu > li.dropdown > a {
+    position: relative;
+  }
+  /* Esconde el menú desplegable por defecto */
+  .quicklinks-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 100%;
+    padding: 0;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+  }
+  /* Muestra el dropdown cuando se hace hover sobre el li */
+  .quicklinks-menu > li:hover .dropdown-menu {
+    display: block;
+  }
+  /* Estilos para los enlaces del dropdown */
+  .quicklinks-menu .dropdown-menu li {
+    display: block;
+  }
+  .quicklinks-menu .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 0.750rem;
+  }
+  /*Dropdown header and footer*/
+  .quicklinks-menu .dropdown-menu li.dm-footer a {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (max-width: 767px) {
+    .quicklinks-menu > .user .user-image {
+      float: none;
+      margin-right: 0;
+      margin-top: -8px;
+      line-height: 10px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .quicklinks-menu > li {
+      position: relative;    
+    }
+    .quicklinks-menu .dropdown-menu {
+      right: 0;
+    }  
+  }
+
+  /*Colours*/
+.quicklinks-menu > li > a {
+    color: $primary-text-color;
+  }
+  .quicklinks-menu > li > a > i{
+    color: $highlight-color;
+  }
+  .quicklinks-menu > li > a:hover,
+  .quicklinks-menu > li > a:focus {
+    background-color: $secondary-color;
+  }
+  .quicklinks-menu .dropdown-menu li a {
+    background-color: $primary-color;
+    color:$primary-text-color;
+  }
+  .quicklinks-menu .dropdown-menu li a:hover{
+    background-color:$secondary-color;
+  }
+  .quicklinks-menu .dropdown-menu li.dm-header a:hover,
+  .quicklinks-menu .dropdown-menu li.dm-footer a:hover {
+    background-color: $primary-color;
+  }
+
+
+  /*Message-links*/
+.dropdown-menu .message-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown-menu .message-links img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .dropdown-menu .message-links h4{
+    font-size: 14px;
+    margin: 0 0 0.25rem 0;
+  }
+  .dropdown-menu .message-links p{
+    font-size: 12px;
+    margin: 0;
+  }

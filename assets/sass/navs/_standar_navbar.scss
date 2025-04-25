@@ -1,0 +1,174 @@
+/* # NAVBAR
+---------------------------------------------- */
+nav {
+  background-color: lighten($highlight-color, 10%);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2rem 1rem 0 1rem;
+  flex-direction: column;
+  min-height: 3.5rem;
+}
+
+/* Botón hamburguesa (oculto por defecto) */
+.menu-toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: $primary-color;
+  cursor: pointer;
+  z-index: 1100;
+
+  /* Ocultar el ícono de la hamburguesa por defecto */
+  .icon-open {
+    display: inline-block;
+  }
+
+  /* Ocultar la "X" por defecto */
+  .icon-close {
+    display: none;
+  }
+
+  &.open {
+    /* Mostrar la X cuando se abre el menú */
+    .icon-open {
+      display: none;
+    }
+    
+    .icon-close {
+      display: inline-block;
+    }
+
+    /* Cambiar a 'fixed' cuando el menú está abierto */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Estilo para los enlaces del menú */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  li.active a {
+    opacity: 1;
+    font-weight: bold;
+  }
+
+  a {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    color: $primary-color;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+      opacity: 1;
+    }
+  }
+}
+
+/* Vista móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: lighten($highlight-color, 10%);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Los íconos solo se muestran cuando corresponda */
+  .menu-toggle .icon-open {
+    display: inline-block;
+  }
+
+  /* Mostrar la X cuando el menú está abierto */
+  .menu-toggle.open .icon-close {
+    display: inline-block;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Vista escritorio */
+@media (min-width: 768px) {
+  nav {
+    align-items: center;
+    padding: 0 1rem;
+    min-height: auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    li.active a {
+      font-weight: bold;
+
+      &::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+
+    a {
+      position: relative;
+      padding: 1rem;
+      font-size: 1rem;
+      color: $primary-color;
+      opacity: 0.5;
+      text-decoration: none;
+      transition: color 0.3s, opacity 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        height: 2px;
+        width: 80%;
+        background-color: $primary-color;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+        opacity: 1;
+
+        &::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
+    }
+  }
+}

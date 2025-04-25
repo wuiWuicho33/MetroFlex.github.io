@@ -1,0 +1,29 @@
+/* ==============================================
+# NAV
+============================================== */
+
+/* # SOCIAL-LINKS
+---------------------------------------------- */
+.social_links {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    padding: 0;
+    line-height: normal;
+    a {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 16px;
+      text-align: center;
+      background-color: $primary-text-color;
+      color: $primary-color;
+      transition: color 0.3s ease;
+      //Hover
+      &:hover {color: $fourth-color;}
+    }
+  }
+}

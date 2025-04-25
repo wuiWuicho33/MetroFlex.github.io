@@ -1,0 +1,60 @@
+
+/* ==============================================
+# CONTAINER
+============================================== */
+.container-fluid {
+  width: 100%;
+  margin:0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  margin:0 auto;
+  padding: 0 20px;
+}
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {
+  .container {max-width: 640px;}
+}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+  .container {max-width: 768px;}
+}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    &.slim{
+      max-width: 800px;
+    }
+  }
+}
+
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
+@media (min-width: 1536px) {
+  .container {max-width: 1536px;}
+}

@@ -1,0 +1,104 @@
+/* ==============================================
+# Pagination area
+============================================== */
+.pagination-area {
+	display: flex;
+	flex-direction:column;
+	gap: 1rem;
+
+	/*News*/
+	.news {
+		display: flex;
+		align-items: center;		
+		gap: 1rem; 
+		justify-content: center;
+
+		.form-control{
+			width: 80px;
+		}
+
+	}
+
+}
+
+/* Pagination */
+.pagination {
+	display: flex;     
+	align-items: center;
+	gap: 1rem;   
+
+	ul {
+		display: flex;
+		gap: 0.250rem;
+			
+		a, 
+		strong{
+			display:block; 
+			padding:8px 15px; 
+			background-color: $primary-color;
+			border:1px solid $tertiary-color;  
+			color:lighten($highlight-color, 10%); 
+			background-clip:padding-box; 
+			font-weight:bold;
+			border-radius: 0.3rem;
+			transition: background-color 0.5s ease, color 0.5s ease;
+		}   
+			
+		a:hover{
+			background-color:lighten($highlight-color, 50%); 
+			border:1px solid lighten($highlight-color, 10%);
+		}  
+			
+		.current *{
+			background-color:lighten($highlight-color, 10%); 
+			color:$primary-color; 
+			border:1px solid lighten($highlight-color, 10%);
+		}            
+	}     
+
+}
+
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+
+  /* # Pagination-Área */
+  .pagination-area {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    
+    .news{
+      align-items: center;
+      gap: 1rem;
+
+      .orden-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 0.875rem;
+
+        & i {margin-left: 5px;}        
+      }
+    }	
+
+  }
+
+	.pagination {
+		flex-direction: column;
+		gap:0.5rem;
+	}	  
+
+}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {
+	
+  /* # Pagination-Área */
+  .pagination-area {}
+  .pagination {flex-direction: row;}	  
+	
+}

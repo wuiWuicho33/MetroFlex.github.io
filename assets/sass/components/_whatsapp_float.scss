@@ -1,0 +1,42 @@
+/* ==============================================
+# WHATSAPP FLOAT
+============================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: $primary-color;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1eaf54;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  i {
+    color: $primary-color;
+  }
+}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+  .whatsapp-float {
+    bottom: 40px;
+  }  
+}
+
+

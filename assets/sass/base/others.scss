@@ -1,0 +1,40 @@
+/* ==============================================
+# COMPONENTES
+============================================== */
+
+/* # Overlay-settings
+----------------------------------------------- */
+.overlay-settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+.img-container:hover .overlay-settings {opacity: 1;} 
+
+/* -----------------------------------------------
+  # Content
+----------------------------------------------- */
+/* VideoWrapper */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 51.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  iframe,object,embed,video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

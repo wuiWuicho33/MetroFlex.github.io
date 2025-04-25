@@ -1,0 +1,182 @@
+/* ==============================================
+# LAYOUT
+============================================== */
+
+/* # GENERAL
+---------------------------------------------- */
+/*
+section{padding:2rem 0;}
+section.topbar{padding:0;}
+section.footer {
+  padding: 1rem 0;
+  p {margin-bottom: 0;}
+}
+*/
+
+.no-results{
+  background-color:$tertiary-color;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* # Tools-news-bar
+----------------------------------------------- */
+.tools-news-bar{
+  background-color: $primary-color;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* # Filter-Área */
+.filter-wrapper {
+  display: flex;
+  flex-direction:column;
+  gap: 0.5rem;
+  border-bottom:1px solid $secondary-color;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  /*FIlter*/
+  .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;        
+  }
+}
+
+/* # Date group */
+.date-group {
+  display: flex;
+  border-radius: 0.25rem; 
+  overflow: hidden; 
+  width:100%;
+}
+
+.date-container {
+  flex: 1;
+  position: relative;
+  &:first-child .text-input,
+  &:first-child .date-input {border-radius: 0.25rem 0 0 0.25rem; }
+  &:last-child .text-input,
+  &:last-child .date-input {border-radius: 0 0.25rem 0.25rem 0; }
+  .date-input {display: none;}      
+
+  .text-input, 
+  .date-input {
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    border: 1px solid $tertiary-color;
+    transition: border-color 0.15s ease-in-out;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color:$fourth-color;      
+    border-radius: 0; 
+  }
+
+  .text-input{
+    &:hover{border-color: lighten($highlight-color, 10%); }
+    &:focus{outline: none;}
+  }
+
+  .date-input:focus {
+    border: 1px solid lighten($highlight-color, 10%);  
+    outline: none; 
+  }        
+
+}
+
+  /* # Search container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid $tertiary-color;
+    border-radius: 0.25rem;
+    width: 100%;
+    background-color: $primary-color;
+    transition: all 0.3s ease; /* Transición suave para el borde y fondo */
+
+    /* Efecto cuando el input está en focus */
+    &:focus-within, &:hover {
+      border: 1px solid lighten($highlight-color, 10%);  
+    }  
+
+    .form-control {
+      border: none;
+    }
+
+    /*Search button*/
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px 5px 5px;
+      color: $fourth-color;
+    
+      i {font-size: 0.875rem;}  
+    }
+
+  }
+
+/* ==============================================
+# MEDIAQUERIES
+============================================== */
+/* # Mobile
+-------------------------------------------------------------------- */
+/*=> 640px Igual o mayor a 640px se aplicarán los siguientes estilos */
+@media (min-width: 640px) {}
+
+/* # Tablet
+-------------------------------------------------------------------- */
+/*=> 768px Igual o mayor a 768px se aplicarán los siguientes estilos */
+@media (min-width: 768px) {   
+  /* # Filter-Área */
+  .filter-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    
+    .filter{
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      select.form-control{
+        width: auto;
+      }
+
+      /* # date-group */
+      .date-group {
+        width:350px;
+      }        
+    }
+  }    
+
+}
+
+
+
+
+/*=> 1024px Igual o mayor a 1024px se aplicarán los siguientes estilos */
+@media (min-width: 1024px) {
+  .filter-wrapper {
+    flex-direction: row;
+    align-items: flex-end;
+
+    .filter{width: auto;}      
+  }
+  
+  //.search-container {max-width: 250px;}  
+
+}
+
+/* # Desktop
+-------------------------------------------------------------------- */
+/*=> 1280px Igual o mayor a 1280px se aplicarán los siguientes estilos */
+@media (min-width: 1280px) {}
+/*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
+@media (min-width: 1536px) {}

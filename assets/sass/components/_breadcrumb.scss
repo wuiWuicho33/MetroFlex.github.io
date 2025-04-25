@@ -1,0 +1,60 @@
+/* ==============================================
+# BREADCRUMB
+============================================== */
+.banner{
+	display:block; 
+	padding:100px 0 30px 0; 
+	width:100%; 
+	margin:0; 
+	text-align:left; 
+	word-wrap:break-word;
+
+	#pagetitle h1{
+		margin-bottom:1rem; 
+		color: $primary-color;
+		text-transform: uppercase;
+	}	
+}
+
+/* Breadcrumb */
+.breadcrumb ol {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	//gap: 0.5rem;
+	align-items: center;
+
+	li {
+		color:$primary-color;
+		font-size: 0.75rem;
+		text-transform:uppercase;
+
+		&::after {
+			content: "/";
+			margin: 0 0.5rem;
+			color:$gray-color; 
+		}		
+
+		&:last-child::after {
+			content: "";
+		}		
+
+		a {
+			color:$gray-color; 
+			font-size: 0.75rem;
+		
+			&:hover {
+				text-decoration: underline;
+				color:$primary-color;
+			}	
+		}
+
+		.icon{
+			color:$primary-color;
+			margin-right: 0.25rem;
+		}
+
+	}
+
+}

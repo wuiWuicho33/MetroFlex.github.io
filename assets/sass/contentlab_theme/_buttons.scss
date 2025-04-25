@@ -1,0 +1,323 @@
+/* ==============================================
+# BUTTONS
+============================================== */
+.btn {
+  display: inline-block;
+  padding: .8rem 1.5rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+
+  i{
+    font-size:1rem;
+    line-height: 1.5;
+    margin-right: 0.25rem;
+  }
+}
+
+/* Btn-properties */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-sm {
+  padding: .25rem .5rem !important;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  border-radius: .2rem;
+
+  i{ 
+    font-size: .875rem;
+    line-height: .5rem;
+  }
+}
+
+
+/*--------------- Btn-disable ---------------*/
+.btn-disable {
+  cursor:not-allowed;
+}    
+
+/*--------------- Btn-Link ---------------*/
+.btn-link {
+  &:hover, &:active, &:focus{
+    text-decoration: underline;
+  }
+}
+
+/*--------------- Btn-group ---------------*/
+.button-group {
+  display: inline-flex;
+  border-radius: 0.25rem; 
+  //width: 100%;
+
+  button {
+    margin: 0;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    //width: 100%;
+  }  
+}
+
+/* Botón izquierdo */
+.button-left {border-radius: 0.25rem 0 0 0.25rem; }
+/* Botón derecho */
+.button-right {border-radius: 0 0.25rem 0.25rem 0; }
+
+/*Exclusivo para este proyecto*/
+.btn.btn-flat {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-width: 1px;
+}
+
+/*--------------- Btn-circle ---------------*/
+.btn-circle {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-circle-inverse {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* -----------
+  # Colours
+----------- */
+/*--------------- Btn-light ---------------*/
+.btn-light {
+  background-color: lighten($highlight-color, 60%);
+  color: lighten($highlight-color, 10%); 
+  border-color: lighten($highlight-color, 10%); 
+  i {color: lighten($highlight-color, 10%);}
+
+  &:hover{
+    background: lighten($highlight-color, 10%); 
+    color: $primary-color;
+    i {color: $primary-color;}      
+  }
+}
+/* btn-default-inverse */
+.btn-light-inverse {
+  background-color: $primary-color;
+  color: lighten($highlight-color, 10%); 
+  border-color: $tertiary-color;
+  i {color: lighten($highlight-color, 10%);}
+  
+  &:hover {
+    background-color: lighten($highlight-color, 60%);
+    border-color: lighten($highlight-color, 10%); 
+    i {color: lighten($highlight-color, 10%);}
+  }
+}
+
+/*--------------- Btn-dark ---------------*/
+.btn-dark {
+  //background-color: lighten($sixty-color, 10%);   
+  background: linear-gradient(45deg, $seventy-color, $sixty-color);
+  color: $primary-color;
+  i {color: $primary-color;}    
+
+  &:hover{
+    //background:$sixty-color;
+    background: linear-gradient(45deg, $sixty-color, $seventy-color);
+    color: $primary-color;
+    i {color: $primary-color;}      
+  }
+}
+/* btn-default-inverse */
+.btn-dark-inverse {
+  background-color: $primary-color;
+  color: lighten($sixty-color, 10%); 
+  border-color: lighten($sixty-color, 10%); 
+  i {color: lighten($sixty-color, 10%);}
+  
+  &:hover {
+    background-color: lighten($sixty-color, 10%);
+    color: $primary-color; 
+    i {color: $primary-color;}
+  }
+}
+
+/*--------------- Btn-lighter ---------------*/
+.btn-lighter {
+  background-color: $secondary-color;   
+  color: $fifth-color;
+  i {color: $fifth-color;}    
+
+  &:hover{
+    background:$secondary-color;
+  }
+}
+/* btn-light-inverse */
+.btn-lighter-inverse {
+  background-color: $primary-color;
+  color: $fifth-color; 
+  border-color: $secondary-color;
+  i {color: $fifth-color;}
+  
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+/*--------------- Btn-danger ---------------*/
+.btn-danger {
+  background-color: lighten($danger-color, 50%);
+  color: $danger-color;
+  i {color: $danger-color;}    
+  
+  &:hover{
+    background:$danger-color;
+    color: $primary-color;
+    i {color: $primary-color;}      
+  }
+}
+/* btn-danger-inverse */
+.btn-danger-inverse {
+  background-color: $primary-color;
+  color: $danger-color;
+  border-color: $danger-color;
+  i {color: $danger-color;}
+  
+  &:hover {
+    background-color: $danger-color;
+    color:$primary-color;
+    i {color: $primary-color;}
+  }
+}
+
+/*--------------- Btn-success ---------------*/
+.btn-success {
+  background-color: lighten($success-color, 40%);
+  color: $success-color;
+  i {color: $success-color;}    
+  
+  &:hover{
+    background:$success-color;
+    color: $primary-color;
+    i {color: $primary-color;}      
+  }
+}
+/* btn-danger-inverse */
+.btn-success-inverse {
+  background-color: $primary-color;
+  color: $success-color;
+  border-color: $success-color;
+  i {color: $success-color;}
+  
+  &:hover {
+    background-color: $success-color;
+    color:$primary-color;
+    i {color: $primary-color;}
+  }
+}
+
+/*--------------- Btn-warning ---------------*/
+.btn-warning {
+  background-color: lighten($warning-color, 35%);
+  color: $warning-color;
+  i {color: $warning-color;}    
+  
+  &:hover{
+    background:$warning-color;
+    color: $primary-color;
+    i {color: $primary-color;}      
+  }
+}
+/* btn-danger-inverse */
+.btn-warning-inverse {
+  background-color: $primary-color;
+  color: $warning-color;
+  border-color: $warning-color;
+  i {color: $warning-color;}
+  
+  &:hover {
+    background-color: $warning-color;
+    color:$primary-color;
+    i {color: $primary-color;}
+  }
+}
+
+/*--------------- Btn-disable ---------------*/
+.btn-disable {
+  background-color: $secondary-color;
+  color: $fourth-color;
+  i {color: $fourth-color;}    
+}    
+
+/*--------------- Btn-Link ---------------*/
+.btn-link {
+  &:hover, &:active, &:focus{
+    color:$highlight-color;
+  }
+}
+
+/*--------------- Btn-group ---------------*/
+/* Botón izquierdo */
+.button-left {
+  background-color: $primary-color;
+  color: lighten($highlight-color, 10%);  
+  border: 1px solid lighten($highlight-color, 10%); 
+
+  &:hover {
+    background-color: lighten($highlight-color, 10%); 
+    color:$primary-color;
+  }  
+}
+
+/* Botón derecho */
+.button-right {
+  background-color: lighten($highlight-color, 10%); 
+  color: $primary-color;  
+  border: 1px solid lighten($highlight-color, 10%);  
+
+  &:hover {
+    background-color: $highlight-color;
+    border: 1px solid $highlight-color;
+  }  
+}
+
+/*--------------- Btn-circle ---------------*/
+.btn-circle {
+  background-color: $highlight-color;
+  border: 1px solid $highlight-color;
+  i{color:$primary-color;}
+
+  &:hover{
+    background-color: $primary-color; 
+    i{color:$highlight-color;}
+  }
+}
+
+.btn-circle-inverse {
+  background-color:$primary-color;
+  border: 1px solid $highlight-color;
+  i{color:$highlight-color;}
+
+  &:hover{
+    background-color: $highlight-color; 
+    i{color:$primary-color;}
+  }
+}

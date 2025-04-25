@@ -1,0 +1,27 @@
+/* ==============================================
+# Back to top
+============================================== */
+
+/* Estilos del botón */
+#back-to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 68px;
+  font-size: 24px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  opacity:.2;
+  color:#292B2C; 
+  background-color:$sixty_color;
+}
+
+#back-to-top:hover {
+  opacity:1;
+}
+
+//Estos estilos están alterados, para conseguir los originales copiarlos directamente de la carpeta de Componentes js sencillos

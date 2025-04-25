@@ -1,0 +1,29 @@
+/* ===========
+# Social links
+=========== */
+ul.social-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:2rem; 
+  height:2rem; 
+  border-radius: 1rem;
+  font-size:1rem; 
+  text-align:center;
+  color:$seventy-color; 
+  background-color:transparent;
+}
+
+.social-links a:hover{
+  color:#FFFFFF; 
+  background-color:#D55A77;
+}
+
+.social-links a.faicon-facebook:hover{background-color:#3B5998;}
+.social-links a.faicon-linkedin:hover{background-color:#0E76A8;}
+.social-links a.faicon-instagram:hover{background-color:#EA4C89;}
