@@ -5885,11 +5885,21 @@ footer.footer {
 .card {
   border-bottom: 5px solid #3675BA;
 }
+.card.custom_card p {
+  color: #3675BA;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
 .card:hover {
   background-color: #3675BA;
   border-bottom: 5px solid #B0ACAA;
 }
 .card:hover .icon, .card:hover a, .card:hover h5, .card:hover p, .card:hover b {
+  color: #ffffff;
+}
+.card:hover.custom_card p {
   color: #ffffff;
 }
 

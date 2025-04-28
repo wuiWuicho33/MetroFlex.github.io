@@ -34,6 +34,15 @@ footer.footer{
 }
 
 .card{
+
+  &.custom_card p{
+    color:$seventy-color;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
   border-bottom: 5px solid $seventy-color;
 
   &:hover{
@@ -41,7 +50,13 @@ footer.footer{
     .icon,a,h5,p,b{color:$primary-color;}      
 
     border-bottom: 5px solid $gray-color;
+
+    &.custom_card p{
+      color:$primary-color;
+    }    
+    
   }
+
 }
 
 nav.sticky {
