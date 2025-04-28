@@ -63,7 +63,7 @@ form, input, textarea, select,.form-control,.custom-select {
 /*Background colors*/
 .bg-default {
   background-color:$primary-color;
-  p,ul{color:$primary-text-color;}  
+  a,p,ul{color:$primary-text-color;}  
   b{color:$seventy-color;}
 }
 .bg-light {
