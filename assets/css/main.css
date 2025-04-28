@@ -70,7 +70,7 @@ form, input, textarea, select, .form-control, .custom-select {
 .bg-default {
   background-color: #ffffff;
 }
-.bg-default p, .bg-default ul {
+.bg-default a, .bg-default p, .bg-default ul {
   color: #414141;
 }
 .bg-default b {
@@ -372,6 +372,10 @@ h2.teaser {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-lowercase {

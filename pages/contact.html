@@ -196,6 +196,7 @@
           <h2>Contáctanos</h2>
           <p>Escríbenos para brindarte más información sobre nuestros productos o para mandarte una cotización y te responderemos lo más pronto posible.</p>
           <!-- ====== Form ====== --> 
+          <!--
           <?php if ($mensajeEnviado): ?>
           <div style="padding: 1rem; background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; border-radius: 5px; margin-bottom: 1rem;">
             ¡Tu mensaje fue enviado con éxito!
@@ -204,7 +205,9 @@
             <div style="padding: 1rem; background-color: #f8d7da; color: #842029; border: 1px solid #f5c2c7; border-radius: 5px; margin-bottom: 1rem;">
               Hubo un error al enviar el mensaje. Por favor intenta más tarde.
             </div>
-          <?php endif; ?>        
+          <?php endif; ?>                  
+          --> 
+
           <form action="formulario.php" method="post" class="grid grid-cols-1">
             <div class="item">                    
               <label for="name">Nombre <span>*</span></label>
