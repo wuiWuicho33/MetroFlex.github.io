@@ -4711,7 +4711,7 @@ ul.social-links {
 ============================================== */
 .banner {
   display: block;
-  padding: 100px 0 30px 0;
+  padding: 100px 0 50px 0;
   width: 100%;
   margin: 0;
   text-align: left;
@@ -5921,9 +5921,9 @@ nav.sticky {
   max-width: 300px;
 }
 
-.img-max-400 {
+.img-max-500 {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 /* ==============================================
