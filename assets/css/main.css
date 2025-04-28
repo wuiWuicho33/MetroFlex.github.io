@@ -436,6 +436,10 @@ img {
   border-radius: 50%;
 }
 
+.w-500 {
+  max-width: 500px !important;
+}
+
 /* -----------------------------------------------
   # Container filter with background image
 ----------------------------------------------- */
@@ -5910,6 +5914,16 @@ nav.sticky {
   z-index: 1000;
   background-color: #124e8e;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img-max-300 {
+  width: 100%;
+  max-width: 300px;
+}
+
+.img-max-400 {
+  width: 100%;
+  max-width: 400px;
 }
 
 /* ==============================================
