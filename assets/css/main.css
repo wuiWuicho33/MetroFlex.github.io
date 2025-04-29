@@ -4650,12 +4650,12 @@ ul.social-links {
 
 .caption h2 {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 0 0 1rem 0;
 }
 
 .caption p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #ffffff;
   margin: 0;
 }
@@ -4685,6 +4685,14 @@ ul.social-links {
   background: white;
 }
 
+@media (min-width: 640px) {
+  .caption h2 {
+    font-size: 4rem;
+  }
+  .caption p {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 768px) {
   .swiper {
     height: 450px;
@@ -4694,10 +4702,10 @@ ul.social-links {
     height: auto;
   }
   .caption h2 {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
   .caption p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .caption {
     left: 10%;
