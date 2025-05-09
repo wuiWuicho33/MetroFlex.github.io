@@ -2953,6 +2953,22 @@ table.align-right .switch-group {
 -------------------------------------------------------------------- */
 /*=> 1280px Igual o mayor a 1280px se aplicarán los siguientes estilos */
 /*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.hidden {
+  display: none;
+}
+
 /* ==============================================
 # SWITCHER
 ============================================== */
