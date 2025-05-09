@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $subject = $_POST["subject"];
   $message = $_POST["message"];
 
-  $to = "cliente@ejemplo.com"; // Cambia esto por el correo real
+  $to = "ventas.herramientas1@yeiflex.com.mx"; // Cambia esto por el correo real
   $headers = "From: $name <$email>\r\n";
   $headers .= "Reply-To: $email\r\n";
   $headers .= "Content-Type: text/plain; charset=UTF-8";
