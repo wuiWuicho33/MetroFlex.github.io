@@ -196,35 +196,44 @@
           <h2>Contáctanos</h2>
           <p>Escríbenos para brindarte más información sobre nuestros productos o para mandarte una cotización y te responderemos lo más pronto posible.</p>                                     
 
-          <form action="formulario.php" method="post" class="grid grid-cols-1">
-            <div class="item">                    
-              <label for="name">Nombre <span>*</span></label>
-              <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required>
-            </div>   
-            <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- ====== Form ====== --> 
+            <form action="https://formsubmit.co/dg.luism19@gmail.com" method="POST" class="grid grid-cols-1">        
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+              
+              <div class="item">                    
+                <label for="name">Nombre <span>*</span></label>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required>
+              </div>           
+
+              <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="item">
+                  <label for="phone">Teléfono <span>*</span></label>
+                  <input class="form-control" type="tel" id="phone" name="phone" placeholder="Escribe tu número de teléfono" required>
+                </div>                                                                                                  
+                <div class="item">
+                  <label for="email">Correo electrónico <span>*</span></label>
+                  <input class="form-control" type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
+                </div>
+              </div>        
+
+              <div class="item">                    
+                <label for="subject">Asunto <span>*</span></label>
+                <input class="form-control" type="text" id="subject" name="subject" placeholder="Escribe el asunto de tu mensaje" required>
+              </div>           
+
               <div class="item">
-                <label for="phone">Teléfono <span>*</span></label>
-                <input class="form-control" type="tel" id="phone" name="phone" placeholder="Escribe tu número de teléfono" required>
-              </div>                                                                                                  
-              <div class="item">
-                <label for="email">Correo electrónico <span>*</span></label>
-                <input class="form-control" type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
+                <label for="example-textarea">Mensaje <span>*</span></label>
+                <textarea class="form-control" id="example-textarea" name="message" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>                
+              </div>        
+
+              <div class="flex justify-end">
+                <button type="submit" class="btn btn-dark">
+                  Enviar
+                </button>         
               </div>
-            </div>
-            <div class="item">                    
-              <label for="subject">Asunto <span>*</span></label>
-              <input class="form-control" type="text" id="subject" name="subject" placeholder="Escribe el asunto de tu mensaje" required>
-            </div>   
-            <div class="item">
-              <label for="message">Mensaje <span>*</span></label>
-              <textarea class="form-control" id="message" name="message" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>                
-            </div>
-            <div class="flex justify-end">
-              <button type="submit" class="btn btn-dark">
-                Enviar
-              </button>         
-            </div>
-          </form>
+            </form>
+
 
           <!-- ====== Alertas ====== -->           
           <div id="alert-container" class="hidden mb-4">
