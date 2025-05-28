@@ -70,7 +70,7 @@ form, input, textarea, select, .form-control, .custom-select {
 .bg-default {
   background-color: #ffffff;
 }
-.bg-default a, .bg-default p, .bg-default ul {
+.bg-default p, .bg-default ul {
   color: #414141;
 }
 .bg-default b {
